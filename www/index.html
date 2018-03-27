@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<script src="js/pgb.js"></script>
+		<script src="cordova.js"></script>
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+		<script src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	</head>
+	<body onload="init()">
+		
+		<!-- My app main page -->
+		<div data-role="page" id="pageone">
+		  <div data-role="header">
+			<h1>Order</h1>
+		  </div>
+		  <div data-role="main" class="ui-content">
+			<p></p>
+			<form id="formul">
+				<label for="nameInput">Name:</label>
+				<input type="text" name="textinput-2" id="nameInput" placeholder="Put your firstname" value="">
+				<label for="surnameInput">Surame:</label>
+				<input type="text" name="textinput-2" id="surnameInput" placeholder="Put your lastname" value="">
+				<label for="dateInput">Date:</label>
+				<input type="date" name="dateInput" id="date" value="">
+				<label for="select-choice-1" class="select">Select your favourite fruit: </label>
+				<select name="select-choice-1" id="select-choice-1">
+				    <option value="apple">Apple</option>
+				    <option value="banana">Banana</option>
+				    <option value="pineapple">Pineapple</option>
+				    <option value="orange">Orange</option>
+					<option value="kiwi">Kiwi</option>
+				</select>
+				<label for="quantity">Quantity:</label>
+				<input type="number" name="number" pattern="[0-9]*" id="quantity" value="">
+				<label for="reject">Reject:</label>
+				<button type="reset" id="reject" class="ui-shadow ui-btn ui-corner-all ui-mini" ">Reject</button>
+				<label for="submit-6">Approve:</label>
+				<!--
+				<button type="submit" id="submit-6" class="ui-shadow ui-btn ui-corner-all ui-mini" >Approve</button>
+			-->
+				<button type="button" id="submit-6" class="ui-shadow ui-btn ui-corner-all ui-mini" onclick="approveForm()" >Approve</button>
+			</form>
+			
+		  </div>
+		  <div data-role="footer" data-position="fixed">
+			<h1>(c) Łukasz Pudzisz</h1>
+		  </div> 
+		</div> 
+		
+		<div data-role="page" id="pagetwo">
+		  <div data-role="header">
+		  	<a href="#pageone" data-icon="back"></a>
+			<h1>Your's order:</h1>
+		  </div>
+		  <div data-role="main" class="ui-content">
+		  	<ul>
+		  		<li id="fullName"></li>
+		  		<li id="dateLi"></li>
+		  		<li id="fruitLi"></li>
+		  		<li id="quantityLi"></li>
+		  	</ul>
+		  </div>
+		  <div data-role="footer" data-position="fixed">
+			<h1>(c) Łukasz Pudzisz</h1>
+		  </div>
+		</div>
+		
+		
+	</body>
+</html>
